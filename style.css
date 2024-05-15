@@ -4,74 +4,83 @@
     font-family: 'Roboto', sans-serif;
 }
 
-nav {
+.navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #eee;
     padding: 22px;
     box-shadow: 0px 2px 2px 2px rgb(162, 162, 162);
 }
 
-.nav .logo {
-    margin-left: 22px;
+.navbar-brand {
     font-size: 24px;
+    margin-left: 22px;
 }
 
-ul {
+.navbar-nav {
     margin-right: 45px;
     margin-top: 7px;
+   
 }
 
-nav ul li {
+.navbar-nav li {
     list-style: none;
+    
 }
 
-ul li a {
+.navbar-nav li a {
     margin-inline: 22px;
     font-size: 20px;
+    color: black; 
+    text-decoration: none;
+    align-items: center;
 }
 
-ul li i {
-    font-size: 22px;
-}
-
-ul li #home {
-    color: rgb(5, 167, 167);
-}
-
-ul li a:hover {
+.navbar-nav li a:hover {
     border-bottom: 2px solid black;
     cursor: pointer;
 }
 
-ul li i:hover {
+.navbar-nav li i {
+    font-size: 22px;
+}
+
+.navbar-nav li i:hover {
     color: gray;
     cursor: pointer;
 }
 
 .main {
-    display: flex;
+   
     justify-content: space-around;
-    background-image: url("images/p12.jpg");
+    align-items: center;
+    background-image: url("images/l1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    
 }
 
-.main .mainText {
-    margin-top: 144px;
+.mainText {
+    color: rgb(255, 255, 255);
 }
 
 .mainText h1 {
     font-size: 64px;
-    color: white;
+    color: rgb(24, 22, 22);
 }
 
 .mainText p {
-    color: white;
+    color: rgb(0, 0, 0);
+    margin-top: 12px;
 }
 
 .mainText h2 {
-    color: white;
+    color: rgb(25, 2, 2);
 }
 
 .mainText .top {
@@ -88,42 +97,50 @@ ul li i:hover {
     margin-top: 24px;
 }
 
-.mainText p {
-    margin-top: 12px;
-}
-
 .mainText button:hover {
-    border: 3px solid rgb(2, 128, 128);
+    border: 3px solid rgb(6, 71, 71);
     background-color: transparent;
     color: rgb(2, 121, 121);
 }
 
-.head h1 {
+.trend {
+    margin-top: 50px; /* Adjust as needed */
+   
+}
+
+.trend .head {
     text-align: center;
     padding: 33px;
     margin-top: 32px;
 }
 
-.head span {
+.trend .head h1 {
+    color: black; /* Adjust color as needed */
+}
+
+.trend .head span {
     color: rgb(2, 164, 164);
 }
 
 .card {
     display: flex;
     justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+   
 }
 
-.card .crd {
+.crd {
     width: 300px;
     height: 500px;
-    background-color: white;
-    margin-inline: 11px;
+    background-color: rgb(255, 255, 255);
+    margin-inline: 11px;;
 }
 
 .crd img {
     width: 85%;
     padding: 22px;
-    border-radius: 51px;
+   border-radius: 50px;
+   
 }
 
 .crdText {
@@ -132,7 +149,7 @@ ul li i:hover {
 }
 
 .crdText button {
-    width: 110px;
+    width: 200px;
     height: 33px;
     border: none;
     background-color: rgb(5, 141, 141);
@@ -153,6 +170,7 @@ ul li i:hover {
     background-color: #fff;
     margin-inline: 22px;
     border-radius: 11px;
+    overflow: hidden; /* Hide overflow content */
 }
 
 .blog:hover {
@@ -164,6 +182,7 @@ ul li i:hover {
 .blog img {
     padding: 22px;
     width: 85%;
+    border-radius: 40px;
 }
 
 .blogText {
@@ -182,60 +201,6 @@ ul li i:hover {
     margin-top: 162px;
     position: relative;
     top: 33px;
-}
-
-.letter {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    background-color: rgb(2, 2, 66);
-    padding: 43px;
-}
-
-.inp {
-    display: flex;
-}
-
-.inp input {
-    width: 330px;
-    height: 33px;
-    outline: none;
-    font-size: 18px;
-    border: none;
-}
-
-.inp button {
-    width: 100px;
-    height: 33px;
-    background-color: rgb(2, 173, 173);
-    color: white;
-    border: none;
-}
-
-.footer {
-    display: flex;
-    justify-content: center;
-    padding: 53px;
-}
-
-.footer .footerText {
-    margin-inline: 85px;
-}
-
-.footerText p {
-    margin-top: 11px;
-}
-
-.im {
-    padding: 50px;
-}
-
-.im img {
-    height: 500px;
-}
-
-.im:hover {
-    transition: 0.6s ease;
 }
 
 .about {
@@ -297,7 +262,7 @@ ul li i:hover {
 }
 
 .form {
-    text-align: center;
+   
     margin-top: 5%;
     padding: 22px;
 }
@@ -320,9 +285,13 @@ ul li i:hover {
 }
 
 .cart {
-    display: flex;
-    justify-content: center;
     display: none;
+   border-color: rgb(179, 114, 30);
+}
+.cart img{
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
 }
 
 .cartText {
@@ -359,3 +328,81 @@ ul li i:hover {
     margin-inline: 11px;
     margin-top: 22px;
 }
+
+.letter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: rgb(13, 85, 103);
+    padding: 3px;
+}
+
+
+
+
+.footer {
+    background-color: #e6e6ed;
+    color: #322b2b;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li a {
+    color: #af2828;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #ffd700;
+}
+
+.im {
+    padding: 50px;
+}
+
+.im img {
+    height: 500px;
+}
+
+.im:hover {
+    transition: 0.6s ease;
+}
+.custom-input {
+   
+    width: 250px;
+  
+}
+
+.custom-button {
+    padding: 10px 20px;
+   
+}
+
+@media (max-width: 768px) {
+    .custom-input {
+        width: 200px;
+    }
+}
+#map {
+    height: 400px;
+    width: 100%; 
+}
+
+
