@@ -6,240 +6,520 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+   
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo">
-                <h1>Ethio Shop</h1>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid ">
+                <a class="navbar-brand text-info" href="#"> <img src="images/p15.png" width="40" height="30" class="d-inline-block align-top" alt="Ethio Shop Logo">
+                    Ethio Fashion</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="index.html" onclick="home()">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#" onclick="shops()">Shops</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#" onclick="blogs()">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#" onclick="abouts()">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#" onclick="contacts()">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul>
-                <li>
-                    <a id="home" onclick="home()">Home</a>
-                    <a id="shop" onclick="shops()">Shops</a>
-                    <a id="blog" onclick="blogs()">Blog</a>
-                    <a id="about" onclick="abouts()">About</a>
-                    <a id="contact" onclick="contacts()">Contact</a>
-                    <i class="fas fa-shopping-cart"></i>
-                </li>
-            </ul>
         </nav>
-        <div class="main">
-            <div class="mainText">
+    
+        <div class="main row mt-5" style="padding-top: 70px;">
+            <div class="mainText col-md-6">
                 <h2>Ethio</h2>
-                <h1 class="top"> super value deals</h1>
-                <h1>on all product</h1>
-                <p>beautiful ethiopian cloth</p>
-                <button>explore</button>
+                <h1 class="top">Super Value Deals</h1>
+                <h1>On All Products</h1>
+                <p>Beautiful Ethiopian cloth</p>
+                <button class="btn btn-primary">Explore</button>
             </div>
-            <div class="im">
-                <img src="images/p6.jpg" alt="">
-            </div>
+            
         </div>
-        <div class="trend">
-            <div class="head">
-                <h1>trends <span>Men's Wear</span></h1>
-            </div>
-            <div class="card">
-                <div class="crd">
-                    <img src="images/p2.jpg" alt="" onclick="show(this)">
-                    <div class="crdText">
-                        <h2>cotton dress</h2>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><br>
-                        <button>add to cart</button>
-                    </div>
+  
+    
+        <div class="row trend">
+            <div class="col">
+                <div class="head">
+                    <h1>Trends <span>Men's Wear</span></h1>
                 </div>
-                <div class="crd">
-                    <img src="images/p2.jpg" alt="" onclick="show(this)">
-                    <div class="crdText">
-                        <h2>cotton dress</h2>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><br>
-                        <button>add to cart</button>
-                    </div>
-                </div>
-                <div class="crd">
-                    <img src="images/p2.jpg" alt="" onclick="show(this)">
-                    <div class="crdText">
-                        <h2>cotton dress</h2>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><br>
-                        <button>add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="trend" id="trendSec">
-            <div class="head">
-                <h1>trends <span>Women's Wear</span></h1>
-            </div>
-            <div class="card">
-                <div class="crd">
-                    <img src="images/p2.jpg" alt="" onclick="show(this)">
-                    <div class="crdText">
-                        <h2>cotton dress</h2>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><br>
-                        <button>add to cart</button>
-                    </div>
-                </div>
-                <div class="crd">
-                    <img src="images/p2.jpg" alt="" onclick="show(this)">
-                    <div class="crdText">
-                        <h2>cotton dress</h2>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><br>
-                        <button>add to cart</button>
-                    </div>
-                </div>
-                <div class="crd">
-                    <img src="images/p2.jpg" alt="" onclick="show(this)">
-                    <div class="crdText">
-                        <h2>cotton dress</h2>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><br>
-                        <button>add to cart</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="about">
-            <div class="aboutus">
-                <h1>#KnowUs</h1>
-                <p>gdfydqytw</p>
-            </div>
-            <div class="me">
-                <img src="images/p2.jpg" alt="">
-                <div class="aboutText">
-                    <h1>who we are ?</h1>
-                    <p>bcdiehfue dheuwo</p>
-                </div>
-            </div>
-        </div>
-        <div class="contact">
-            <div class="contactus">
-                <h1>#lets,s connect</h1>
-                <p>gdfydqytw</p>
-            </div>
-            <div class="contactMe">
-                <div class="contactText">
-                    <h1>visit our office or contact <br>
-                    Us today</h1>
-                    <p>address : fhuhfdhf</p>
-                    <p>contact : dhfge2@hbfehru</p>
-                    <p>number : 83744749947</p>
-                </div>
-                <img src="images/p2.jpg" alt="">
-            </div>
-            <div class="form">
-                <h1> connect with us. fill form</h1>
-                <input type="text" placeholder="enter email"> <br>
-                <input type="text" placeholder="enter email"> <br>
-                <input type="text" placeholder="enter email"> <br>
-                <input type="text" placeholder="enter email"> <br>
-                <input type="text" placeholder="enter email"> <br>
-                <button>submit</button>
-            </div>
-        </div>
-        <div class="cart">
-            <img id="newImg" src="images/p6.jpg" alt="">
-            <div class="cartText">
-                <h1>trends offer : treding shop <br>
-                now</h1>
-                <h2>special price</h2>
-                <h2>45 birr</h2>
-                <p>fegyetr65</p>
-                <p>fegyetr65</p>
-                <p>fegyetr65</p>
-                <div class="btn">
-                    <button>buy now</button>
-                    <button onclick="addCart()">add to cart</button>
-                </div>
-                <button class="back">back</button>
-            </div>
-        </div>
-        <div class="trends">
-            <div class="head">
-                <h1>trend <span>men's wear</span></h1>
-            </div>
-            <div class="card">
-                <div class="blog">
-                    <img src="images/p2.jpg" alt="">
-                    <div class="blogText">
-                        <h2>Ethio girls cloth</h2>
-                        <p>beautiful ethiopian cloth</p>
-                        <a href="">Read more</a>
-                    </div>
-                </div>
-                <div class="blog">
-                    <img src="images/p2.jpg" alt="">
-                    <div class="blogText">
-                        <h2>Ethio boys cloth</h2>
-                        <p>beautiful ethiopian cloth</p>
-                        <a href="">Read more</a>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/m3.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/m7.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/m8.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/m9.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a13.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/m2.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a15.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a16.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="letter">
-            <div class="letterText">
-                <h1>Sign Up for NewLetter</h1>
-                <p>Ethio cloth</p>
-            </div>
-            <div class="inp">
-                <input type="text" placeholder="enter name">
-                <button>sign up</button>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footerText">
-                <h2>trend</h2>
-                <p>service</p>
-                <p>customer</p>
-                <p>satisfaction</p>
-                <p></p>
-            </div>
-            <div class="footerText">
-                <h2>about us</h2>
-                <p>Address : adis</p>
-                <p>service</p>
-                <p>customer</p>
-                <p>satisfaction</p>
-            </div>
-            <div class="footerText">
-                <h2>contact</h2>
-                <p>0900945367</p>
-                <p>customer</p>
-                <p>coming up</p>
-                <p>new arrival</p>
-            </div>
-            <div class="footerText">
-                <h2>training</h2>
-                <p>service</p>
-                <p>customer</p>
-                <p>shop</p>
+        <div class="row trend" id="trendSec">
+            <div class="col">
+                <div class="head">
+                    <h1>Trends <span>Women's Wear</span></h1>
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a17.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a2.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a3.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a4.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a5.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a6.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a20.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="crd">
+                                <img src="images/a18.jpg" alt="" onclick="show(this)">
+                                <div class="crdText">
+                                    <h2>Cotton Dress</h2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i><br>
+                                    <button class="btn btn-primary">Add to Cart</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    
+    
+  
+        <div class="about">
+            <div class="aboutus mt-5" style="padding-top: 70px;">
+                <h1>KnowUs</h1>
+                <p>Ethio Cloth</p>
+            </div>
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 mt-5" style="padding-top: 1px;">
+                           
+                            <img src="images/p15.png" alt="" class=" mt-5 mr-7 rounded-circle" style=" width: 70%; height: auto;">
+                        </div>
+                        <div class="col-md-5" style="padding-top: 40px;">
+                            <div class="aboutText">
+                                <h1>who we are ?</h1>
+                                <ul>
+                                    <li>Welcome to Ethio Cloth, your premier destination for authentic Ethiopian attire.</li>
+                                    <li>At Ethio Cloth, we celebrate the rich cultural heritage of Ethiopia through our meticulously curated collection of traditional clothing.</li>
+                                    <li>Each garment is crafted with passion and precision, reflecting the vibrant colors, intricate patterns, and timeless elegance of Ethiopian fashion.</li>
+                                    <li>Whether you're seeking a stunning ensemble for a special occasion or simply looking to infuse your wardrobe with unique and exquisite pieces, Ethio Cloth has something for every discerning taste.</li>
+                                    <li>Explore our collection and embark on a journey of style and culture with us.</li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+        
+    
+    
+    
+    <div class="contact">
+        <div class="contactus mt-5" style="padding-top: 70px;">
+            <h1>Let's Connect</h1>
+            <p>Feel free to get in touch with us.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mt-5" style="padding-top: 70px;">
+                <div class="contactText">
+                    <h2>Visit Our Office or Contact Us Today</h2>
+                    <ul>
+                        <li><p><strong>Address:</strong>Adiss Ababa 22</p></li>
+                        <li><p><strong>Contact:</strong>ethio@gmail.com</p></li>
+                        <li><p><strong>Number:</strong>+251 99 456 7890</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 mt-5" style="padding-top: 70px; padding-left: 10px;">
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4941.070298564718!2d38.78234338525424!3d9.014216866150676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85b4e0bb4a7f%3A0xc66d0d74337d4bb5!2zSGFuYW4gSyBQbGF6YSB8IEhheWFodWxldCB8IOGIgOGKk-GKlSDhiqwg4Y2V4YiL4YubIHwg4YiD4Yur4YiB4YiI4Ym1!5e1!3m2!1sen!2set!4v1713784626309!5m2!1sen!2set" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <h2>Connect with Us - Fill Form</h2>
+            <div class="row ">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control col-md-6" rows="3" placeholder="Your Message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+        <div class="container mt-5" style="padding-top: 60px;">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="cart">
+                        <div class="mt-5 rounded-pill" style="padding-top: 20px; padding-left: 5px; padding-bottom: 65px;">
+                        <img id="newImg" src="images/m3.jpg" alt="">
+                        
+                        </div>
+                        <div class="cartText" style="padding-left: 70px; padding-top: 40px;">
+                            <ul>
+                            <li><h4 class="text-primary">Discover Trending Items</h4></li>
+                            <div class="price-info">
+                                <li><h5 class="text-success">Special Price: 45 birr</h5></li>
+                                <li><p class="text-muted">Limited Time Offer</p></li>
+                            </div>
+                            <div class="product-details">
+                                <li><p class="description">Explore our latest collection of trendy items. Get your favorites now!</p></li>
+                                <li><p class="sku">Product Code: [23]</p></li>
+                                <li><p class="stock">In Stock</p></li>
+                            </div>
+                        </ul>
+                            <div class="action-buttons mt-3 d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary">Buy Now</button>
+                                <button type="button" class="btn btn-success" onclick="addCart()">Add to Cart</button>
+                            </div>
+                            <button class="btn btn-secondary back mt-9">Back</button>
+                        </div> 
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        
+
+    <div class="container">
+        <div class="row trends">
+            <div class="col">
+                <div class="head text-center mt-5" style="padding-top: 70px;"> 
+                    <h1>Trend <span style="color: rgb(2, 164, 164)">Ethio Wear</span></h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="blog">
+                            <img src="images/b2.jpg" alt="">
+                            <div class="blogText">
+                                <h3>Ethio Girls Cloth</h3>
+                                <p>Beautiful Ethiopian cloth</p>
+                                <button href="#" class="btn btn-info">Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="blog">
+                            <img src="images/b1.jpg" alt="">
+                            <div class="blogText">
+                                <h3>Ethio Boys Cloth</h3>
+                                <p>Beautiful Ethiopian cloth</p>
+                                <button href="#" class="btn btn-info">Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="letter"> 
+    <div class="grid gap-0 column-gap-3">
+            <div class="p-2 g-col-6"> 
+                <div class="letterText">
+                    <h3>NewsLetter</h3>
+                    <p>Ethio cloth</p>
+                </div>
+            </div>
+            <div class="p-2 g-col-6">
+                <div class="d-flex align-items-center justify-content-end">
+                    <div class="inp mr-1 flex-grow-1">
+                        <input type="text" class="form-control rounded-pill mr-2 custom-input" placeholder="Enter name">
+                    </div>
+                    <button class="btn btn-danger rounded-pill custom-button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    
+    
+    
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Quick links</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" onclick="home()" class="text-info">Home</a></li>
+                            <li><a href="#"onclick="shops()" class="text-info">Shops</a></li>
+                            <li><a href="#"onclick="blogs()" class="text-info">Blog</a></li>
+                            <li><a href="#"onclick="abouts()" class="text-info">About</a></li>
+                            <li><a href="#"onclick="contacts()"class="text-info">Contact</a></li>
+                        </ul> 
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Connect with Us</h3>
+                        <ul class="list-inline social-icons">
+                            <li class="list-inline-item"><a href="https://www.facebook.com/YourPage" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="list-inline-item"><a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.instagram.com/YourPage" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/YourProfile" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Contact Information</h3>
+                        <p>123 Main Street, Adiss Ababa</p>
+                        <p>Email: Ethio@gmail.com</p>
+                        <p>Phone: +251 99 456 7890</p>
+                    </div>
+                </div>
+           
+            <div class="text-center py-3">
+                <p>&copy; 2024 Ethio. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    
     <script src="cloth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
 </body>
 </html>
+
