@@ -20,6 +20,7 @@ function homes() {
     document.getElementById("home").style.color = "rgb(2,173,173)";
     document.getElementById("shop").style.color = "black";
     document.getElementById("contact").style.color = "black";
+    document.getElementById("about").style.color = "black";
 }
 
 function shops() {
@@ -82,6 +83,9 @@ function contacts() {
     document.getElementById("about").style.color = "black";
 }
 
+
+
+
 function show(img) {
     let newImg = document.getElementById("newImg");
     console.log(img);
@@ -95,9 +99,11 @@ function show(img) {
     contact.style.display = "none";
 
     document.querySelector(".cart").style.display = "flex";
+
+
 }
 
-function addCart() {
-    alert("Added To Cart");
-    location.reload();
-}
+
+
+
+
